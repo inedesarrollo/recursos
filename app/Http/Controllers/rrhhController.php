@@ -40,7 +40,7 @@ class rrhhController extends Controller
 
                 
             $data = Empleado::findOrFail($id);
-            $data1 = Solicitudes::where('empleado', '=', $id)->get();
+            $data1 = Solicitudes::where('empleado', '=', $id)->where('estado','=','ACTIVO')->get();
             
             $fechaActual = Carbon::now();
             $fechaActual = Date::now()->format('d \d\e F  Y');
@@ -127,7 +127,7 @@ class rrhhController extends Controller
         $direccion='rrhh.mostrar';
 
             $data = Empleado::findOrFail($id);
-            $data1 = Solicitudes::where('empleado', '=', $id)->get();
+            $data1 = Solicitudes::where('empleado', '=', $id)->where('estado','=','ACTIVO')->get();
             return view('rrhh.mostrar', compact('data', 'data1'));
     }
 

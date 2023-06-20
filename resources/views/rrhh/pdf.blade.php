@@ -544,7 +544,7 @@
                    
                    
                     <tr style="text-align: center">
-                        <td  colspan="4" ><strong>EL INFRASCRITO JEFE A.I. DE LA SECCIÓN DE PERSONAL <br>DEL INSTITUTO NACIONAL DE ESTADÍSTICA 
+                        <td  colspan="4" ><strong>LA INFRASCRITA JEFA DE LA SECCIÓN DE PERSONAL <br>DEL INSTITUTO NACIONAL DE ESTADÍSTICA 
                             </strong>
                         </td>
                     </tr>
@@ -623,7 +623,7 @@
                    
 
                     <tr style="text-align: center">
-                        <td  colspan="4" ><strong>INFORMA
+                        <td  colspan="4" ><strong>HACE CONSTAR
                             </strong>
                         </td>
                     </tr>
@@ -1257,8 +1257,8 @@
 
                             <tr class="filaespecial" style="text-align: center">
                                 <td  colspan="4" >
-                                <strong> Lic. German Oswaldo Coloch Aguilar <br> 
-                                Jefe a.i. de la Sección de Personal
+                                <strong> Licda. Claudia Patricia Véliz Flores <br> 
+                                Jefa de la Sección de Personal
                                 <br> Instituto Nacional de Estadítica </strong>
                                 </td>
                         </tr>
