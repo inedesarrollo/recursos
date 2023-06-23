@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Carbon\Carbon;
 use Jenssegers\Date\Date;
+use PhpOffice\PhpWord\IOFactory;
+use PhpOffice\PhpWord\PhpWord;
+use PhpOffice\PhpWord\Style\Alignment;
  
 
 
@@ -41,16 +44,133 @@ class rrhhController extends Controller
                 
             $data = Empleado::findOrFail($id);
             $data1 = Solicitudes::where('empleado', '=', $id)->where('estado','=','ACTIVO')->get();
+           
+            $contador=count($data1);
+            $contadorfecha= count($data1)-1;    
+        
+            
+            $fechafincontrato=$data1[$contadorfecha]->fin;    
+        
+
+
+            $count=1;
+            $count++;
+           
+            
+            
+            
+          $fechaActual = Carbon::now();
+          $fechaformateada = Date::now()->format('Y-m-d');
+
+        
+
+           
+
+          if(strtotime($fechafincontrato) < strtotime($fechaformateada)){
+          
+                  $fechaActual = Date::now()->format('d \d\e F  Y');
+
+                  $pdf = app('dompdf.wrapper');
+                  $pdf->getDomPDF()->set_option("enable_php", true);
+                  $pdf->loadView('rrhh.pdffecha', compact('data','data1','fechaActual','contador','count'))->setPaper('letter');
+                
+                  return $pdf->download('Constancia '.$data->nombres.' '.$data->apellidos.'.pdf'); }
+
+            else{
+
+           
+            
+              $fechaActual = Date::now()->format('d \d\e F  Y');
+
+              $pdf = app('dompdf.wrapper');
+              $pdf->getDomPDF()->set_option("enable_php", true);
+              $pdf->loadView('rrhh.pdf', compact('data','data1','fechaActual','contador','count'))->setPaper('letter');
+            
+              return $pdf->download('Constancia '.$data->nombres.' '.$data->apellidos.'.pdf'); }
+            
+            
+            
+
+
+            
+            
+
+
+
+         //return view('rrhh.pdf', compact('datas'));
+
+    }
+
+
+    public function word(Request $request, $id)
+    {
+        $Modelo = new Empleado;
+        $direccion = 'rrhh';
+        $home = 'home';
+        Date::setLocale('es');
+
+                
+            $data = Empleado::findOrFail($id);
+            $data1 = Solicitudes::where('empleado', '=', $id)->where('estado','=','ACTIVO')->get();
+            $phpWord = new PhpWord();
+
             
             $fechaActual = Carbon::now();
             $fechaActual = Date::now()->format('d \d\e F  Y');
-            $pdf = app('dompdf.wrapper');
-            $pdf->getDomPDF()->set_option("enable_php", true);
-            $pdf->loadView('rrhh.pdf', compact('data','data1','fechaActual'))->setPaper('letter');
+            $section = $phpWord->addSection();
+            
            
-            return $pdf->download('Constancia '.$data->nombres.' '.$data->apellidos.'.pdf'); 
+            
+            // Agregar texto centrado al documento
+           //  $section->addText('LA INFRASCRITA JEFA DE LA SECCIÓN DE PERSONAL DEL INSTITUTO NACIONAL DE ESTADÍSTICA',array('bold' => true , 'align' => 'center' ));
+                    
+             $section->addText(
+                htmlspecialchars(
+                  'LA INFRASCRITA JEFA DE LA SECCIÓN DE PERSONAL DEL INSTITUTO NACIONAL DE ESTADÍSTICA'
+                ),
+                array('name' => 'Arial', 'size' => '12', 'bold' => 'true','alignment' => 'center')
+              );
+
+
+              $section->addText(
+                htmlspecialchars(
+                  'HACE CONSTAR'
+                ),
+                array('name' => 'Arial', 'size' => '12', 'bold' => 'true','alignment' => 'center')
+              );
+
+              
+              $section->addText(
+                htmlspecialchars(
+                  "Que $data->nombres $data->apellidos,suscribió contrato por servicios $data->tiposervicio en la institución, en las siguientes fechas: "
+                ),
+                array('name' => 'Arial', 'size' => '12', 'bold' => 'true','alignment' => 'center')
+              );
+
+
+
+
+
+
+              $estilo_tabla = array(
+                'borderColor' => 'F2F2F2',
+                'borderSize' => '5',
+                'cellMargin' => '20',
+                'bgColor' => '088A68',
+            );
+            
+            $primera_fila = array('bgColor' => 'F2F2F2');
+            $section->addTableStyle('mitabla',$estilo_tabla, $primera_fila);
+            $tabla = $section->addTable('mitabla');
+            
             
 
+                    $filePath = 'constancia '.$data->nombres.' '.$data->apellidos.'.docx';
+                    $objWriter = IOFactory::createWriter($phpWord, 'Word2007');
+                    $objWriter->save($filePath);
+                    return response()->download($filePath)->deleteFileAfterSend();
+           
+            
 
 
          //return view('rrhh.pdf', compact('datas'));

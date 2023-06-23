@@ -40,6 +40,12 @@ Vehículo
                                 Reporte de Contratos en PDF<i class="btn btn-danger"></i></a>
 
                         </div>
+
+                       <!-- <div class="card-tools derecha">
+                            <a href="{{route('rrhh.word',['id'=> $data->codigo])}}" class="btn btn-danger">
+                                Reporte de Contratos en WORD<i class="btn btn-danger"></i></a> -->
+
+                        </div>
                     </div>
                     <div class="card-body row">
                         <div class="col-lg-8">

@@ -420,124 +420,9 @@
                         </td>
                     </tr>
                    
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
+                  
                    
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
+                                 
                    
 
                    
@@ -840,34 +725,17 @@
                                             <th  class="filas tabla">Valor del <br>Contrato</th>
                                         </tr>
 
-
-                                                    <input style="display: none" type="hidden" value="{{$contadorfilas=0}}">
-                                                    <input style="display: none" type="hidden" value="{{$Total=0}}">
-                                            @foreach ($data1 as $datas) 
-
-                                                <tr  class="filas tabla" align="center">
-                                                    
-                                                    <td  class="filas tabla">{{$datas->nrocontrato}}</td>
-                                                    <td  class="filas tabla">{{\Carbon\Carbon::parse($datas->inicio)->format('d/m/Y')}}</td>
-                                                    
-                                                    @if ($Total-1 == $contadorfilas) 
-                                                    <td  colspan="2" class="filas tabla"> A LA FECHA</td>
-                                                            @else
-                                                            <td  class="filas tabla">{{\Carbon\Carbon::parse($datas->fin)->format('d/m/Y')}}</td>
-                                                            <td  class="filas tabla"> Q. {{number_format($datas->honorarios,2)}}</td>
-                                                             
-                                                    @endif
-                                                
-
-                                                </tr>
-
-                                                            <input style="display: none" type="hidden" value="{{$contadorfilas++}}">
-                                                            <input style="display: none" type="hidden" value="{{$Total=$contador}}">
-
-                                                                         
-
+                                    @foreach ($data1 as $datas) 
                                         
-                                            @endforeach    
+                                        <tr  class="filas tabla" align="center">
+                                            
+                                            <td  class="filas tabla">{{$datas->nrocontrato}}</td>
+                                            <td  class="filas tabla">{{\Carbon\Carbon::parse($datas->inicio)->format('d/m/Y')}}</td>
+                                            <td  class="filas tabla">{{\Carbon\Carbon::parse($datas->fin)->format('d/m/Y')}}</td>
+                                            <td  class="filas tabla"> Q. {{number_format($datas->honorarios,2)}}</td>
+                                        </tr>
+                                        
+                                    @endforeach    
 
                                     
                             
@@ -1239,6 +1107,36 @@
                                     </td>
                                 </tr>
 
+
+                                <tr style="text-align: center">
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                </tr>
+
+                                <tr style="text-align: center">
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                    <td  colspan="4" > 
+                                    </td>
+                                </tr>
 
                                 <tr style="text-align: center">
                                     <td  colspan="4" > 

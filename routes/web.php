@@ -57,6 +57,8 @@ Route::get('/admin', [AdminController::class, 'index'])
     Route::put('rrhh/{id}',  [rrhhController::class, 'update'])->name('rrhh.actualizar')->middleware(['auth', 'can:rrhh.actualizar']);
     Route::get('rrhh/{id}/eliminar',  [rrhhController::class, 'destroy'])->name('rrhh.eliminar')->middleware(['auth', 'can:rrhh.eliminar']);
     Route::get('rrhh/{id}/pdf',  [rrhhController::class, 'pdf'])->name('rrhh.pdf')->middleware(['auth', 'can:rrhh.mostrar']);
+    Route::get('rrhh/{id}/word',  [rrhhController::class, 'word'])->name('rrhh.word')->middleware(['auth', 'can:rrhh.mostrar']);
+
     Route::get('rrhh/{id}/buscar',  [rrhhController::class, 'buscar'])->name('rrhh.buscar')->middleware(['auth', 'can:rrhh.mostrar']);
 
 
