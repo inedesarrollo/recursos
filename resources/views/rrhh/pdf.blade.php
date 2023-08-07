@@ -1276,7 +1276,7 @@
                                 <td  colspan="4" >
                                 <strong> Licda. Claudia Patricia Véliz Flores <br> 
                                 Jefa de la Sección de Personal
-                                <br> Instituto Nacional de Estadítica </strong>
+                                <br> Instituto Nacional de Estadística </strong>
                                 </td>
                         </tr>
                     
