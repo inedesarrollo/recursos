@@ -34,7 +34,7 @@
 
     .filas {
         border: 1px solid black;
-        padding: 8px;
+        padding: 5px;
     }
 
     .filaespecial{
@@ -703,80 +703,11 @@
                         </td>
                     </tr>
                    
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
+                     
                    
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
+                     
                    
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
-                   
-                    <tr style="text-align: center">
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                        <td  colspan="4" > 
-                        </td>
-                    </tr>
+                     
                    
      </table>
 
@@ -946,34 +877,7 @@
                                 <td  colspan="4" > 
                                 </td>
                             </tr>
-                            <tr style="text-align: center">
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                            </tr>
-                            <tr style="text-align: center">
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                                <td  colspan="4" > 
-                                </td>
-                            </tr>
+                            
 
 
                             <tr style="text-align: justified">
